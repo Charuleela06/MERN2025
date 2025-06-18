@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>position</title>
+    <style>
+        body{
+            height: 1000px;
+        }
+        #sticky{
+            position: sticky;
+            top: 0;
+        }
+        #fixed{
+            position: fixed;
+            border: 2px solid black;
+        }
+        #relative{
+            position: relative;
+            top: 100px;
+            left: 100px;
+            border: 2px solid black;
+            background-color: lightblue;
+        }
+        #absolute{
+            position: absolute;
+            top: 100px;
+            left: 100px;
+            border: 2px solid black;
+            background-color: lightgreen;
+        }
+    </style>
+</head>
+<body>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Iste optio doloremque, repellendus exercitationem magni necessitatibus? Necessitatibus ratione inventore dolorem error, vitae eveniet earum ipsum illum quisquam quo eligendi placeat dolor iure ducimus quae! Facilis quisquam, veniam et assumenda eveniet eligendi quasi. Officiis eaque quaerat minus sint distinctio sapiente voluptatem rem.</p>
+        <div id="sticky"><h1>Sticky</h1></div>
+        <div id="fixed"><h1>Fixed</h1></div>
+        <div id="relative"><h1>Relative</h1></div>
+        <div id="absolute"><h1>Absolute</h1></div>
+</body>
+</html>
