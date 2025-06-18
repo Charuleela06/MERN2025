@@ -1,0 +1,167 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resume</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            background-color: #f4f4f9;
+            padding: 20px;
+            color: #333;
+        }
+        .header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background: linear-gradient(135deg, #6a11cb, #2575fc);
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            color: #fff;
+            margin-bottom: 20px;
+        }
+        .header h1 {
+            font-size: 2.5em;
+        }
+        .header img {
+            width: 120px;
+            height: 120px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 3px solid #fff;
+        }
+        nav {
+            background: #0078d7;
+            padding: 10px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            margin-bottom: 20px;
+        }
+        nav ul {
+            display: flex;
+            list-style: none;
+            justify-content: center;
+        }
+        nav ul li {
+            margin: 0 15px;
+        }
+        nav ul li a {
+            color: #fff;
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 1.1em;
+            transition: color 0.3s;
+        }
+        nav ul li a:hover {
+            color: #ffd700;
+        }
+        section {
+            background: #fff;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            margin-top: 20px;
+        }
+        section h2 {
+            font-size: 1.8em;
+            color: #0078d7;
+            margin-bottom: 10px;
+            border-bottom: 2px solid #0078d7;
+            padding-bottom: 5px;
+        }
+        section p {
+            color: #555;
+            margin-bottom: 10px;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 10px;
+        }
+        table th, table td {
+            border: 1px solid #ddd;
+            text-align: left;
+            padding: 8px;
+        }
+        table th {
+            background-color: #0078d7;
+            color: #fff;
+            text-transform: uppercase;
+        }
+        table tr:nth-child(even) {
+            background-color: #f9f9f9;
+        }
+        table tr:hover {
+            background-color: #f1f1f1;
+        }
+        table a {
+            color: #0078d7;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        table a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <h1>CHARULEELA S</h1>
+        <img src="profile.png" alt="no image">
+    </div>
+
+    <nav>
+        <ul>
+            <li><a href="resume.html">Objective</a></li>
+            <li><a href="edu.html">Educational Qualification</a></li>
+            <li><a href="skill.html">skills</a></li>
+            <li><a href="present.html">Presentation</a></li>
+            <li><a href="cer.html">Certification</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+    </nav>
+
+    <section id="education">
+        <h2>Educational Qualification</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th>S.NO</th>
+                    <th>Qualification</th>
+                    <th>Institution</th>
+                    <th>View Certificate</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>1</td>
+                    <td>UG</td>
+                    <td>Kongu Engineering College</td>
+                    <td><a href="SEM.jpg">View Source</a></td>
+                </tr>
+                <tr>
+                    <td>2</td>
+                    <td>HSC</td>
+                    <td>Vidhyaa Vikas Matric. Hr. Sec. School</td>
+                    <td><a href="12th.jpg">View Source</a></td>
+                </tr>
+                <tr>
+                    <td>3</td>
+                    <td>SSLC</td>
+                    <td>Vidhyaa Vikas Matric. Hr. Sec. School</td>
+                    <td><a href="10th.jpg">View Source</a></td>
+                </tr>
+            </tbody>
+        </table>
+    </section>
+    </body>
+    </html>
