@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Rock Paper Scissor</h1>
+    <h2>Choose Any</h2>
+    <button onclick="getresult('rock')">Rock</button>
+    <button onclick="getresult('paper')">Paper</button>
+    <button onclick="getresult('scissor')">Scissor</button>
+    <h1 id="result"></h1>
+
+    <script>
+        function getresult(userchoice){
+            var choice=['rock','paper','scissor'];
+            var cmpchoice = choice[Math.floor(Math.random()*3)];
+            console.log(cmpchoice);
+            let result ="";
+            if(userchoice===cmpchoice){
+                result= "DRAW🙄";
+            }
+            else if((userchoice==="paper"&&cmpchoice==="scissor")||(userchoice==="scissor"&&cmpchoice==="rock")||(userchoice==="paper"&&cmpchoice==="rock")){
+                result="LOSS🫠"
+            }
+            else{
+                result="WIN🥳"
+            }
+            document.getElementById("result").innerHTML=result;
+        }
+
+    </script>
+</body>
+</html>
