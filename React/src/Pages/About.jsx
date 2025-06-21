@@ -1,8 +1,14 @@
 import React from 'react'
 
-const About = () => {
+const About = ({items,user}) => {
   return (
-    <div>About</div>
+    <div>
+      <ol>
+        {items.map((array)=><li>{array}</li>)}
+      </ol>
+      <h1>Username:{user.username}</h1>
+      <h1>Password:{user.password}</h1>
+    </div>
   )
 }
 
