@@ -15,7 +15,7 @@ const Home = ({items,user}) => {
 export default Home*/
 import React from 'react'
 import About from './About.jsx'
-import image from './assets/wheel.png'
+import wheel from '../assets/Wheel.png' 
 
 const Home = ({items,users}) => {
   return (
