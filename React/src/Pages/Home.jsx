@@ -1,26 +1,13 @@
-/*import React from 'react'
+import React from 'react';
+import About from './About.jsx'
+ // or '../Pages/About.jsx' depending on folder
 
-const Home = ({items,user}) => {
+const Home = ({ items, user }) => {
   return (
     <div>
-      <ol>
-        {items.map((array)=><li>{array}</li>)}
-      </ol>
-      <h1>Username:{user.username}</h1>
-      <h1>Password:{user.password}</h1>
+      <About items={items} user={user} />
     </div>
-  )
-}
+  );
+};
 
-export default Home*/
-import React from 'react'
-import About from './About.jsx'
-import wheel from '../assets/Wheel.png' 
-
-const Home = ({items,users}) => {
-  return (
-    <About items={items} users={users} />
-  )
-}
-
-export default Home
+export default Home;

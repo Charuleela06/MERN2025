@@ -1,3 +1,11 @@
+///////Charu@123 atlas
+
+mongodb+srv://charuleela:<db_password>@mern2025.r0fr44k.mongodb.net/
+// in db_password give Charu@123 by these can connect to database
+
+mongoose .connect("mongodb+srv://charuleela:<db_password>@mern2025.r0fr44k.mongodb.net/")
+//in code
+
 PS C:\Users\Prathiksha\MERN2025> npm create vite@latest
 
 > npx
@@ -57,3 +65,138 @@ PS C:\Users\Prathiksha\MERN2025\React>
 
 
 <>for error correcting( <div></div> )
+
+
+//mongodb
+show dbs
+Login             72.00 KiB
+PersonalInfoApp   72.00 KiB
+admin             40.00 KiB
+biodataDB        128.00 KiB
+charity_db       152.00 KiB
+charity_tracker    8.00 KiB
+config            72.00 KiB
+donationDB       216.00 KiB
+donation_db       72.00 KiB
+local             72.00 KiB
+studentDB         72.00 KiB
+students          80.00 KiB
+tokyobites       160.00 KiB
+tutorial_db       72.00 KiB
+
+
+use  Reactdb 
+switched to db Reactdb
+
+//insert
+db.Student.insertOne({Name:"vikraam" ,Dept:"IT" ,DOB:"17-07-2001" ,CGPA:"9.2"})
+{
+  acknowledged: true,
+  insertedId: ObjectId('68577c9282b4d32475b36394')
+}
+db.Student.find()
+{
+  _id: ObjectId('68577c9282b4d32475b36394'),
+  Name: 'vikraam',
+  Dept: 'IT',
+  DOB: '17-07-2001',
+  CGPA: '9.2'
+}
+
+//createcollection
+db.createCollection('Student')
+{ ok: 1 }
+db.createCollection('login')
+{ ok: 1 }
+Reactdb
+
+db.Student.insertOne({Name:"charu" ,Dept:"IT" ,DOB:"04-01-2006" ,CGPA:"8.5",isactive:true})
+{
+  acknowledged: true,
+  insertedId: ObjectId('6857804c82b4d32475b36395')
+}
+db.Student.insertMany([{Name:"charu" ,Dept:"IT"},{Name:"dhivya" ,Dept:"IT"},{Name:"Sathya",Dept:"IT"}])
+{
+  acknowledged: true,
+  insertedIds: {
+    '0': ObjectId('685782fc82b4d32475b36396'),
+    '1': ObjectId('685782fc82b4d32475b36397'),
+    '2': ObjectId('685782fc82b4d32475b36398')
+  }
+}
+db.Stuudent.insertOne({Name:"sathya" ,Dept:"IT" ,DOB:"22-04-2006" ,CGPA:"8.5",isactive:true})
+{
+  acknowledged: true,
+  insertedId: ObjectId('6857837282b4d32475b36399')
+}
+db.login.insertOne({Name:"sathya" ,password:"Sathya@123"})
+{
+  acknowledged: true,
+  insertedId: ObjectId('6857839882b4d32475b3639a')
+}
+db.Student.insertOne({Name:"sathya" ,Dept:"IT" ,DOB:"22-04-2006" ,CGPA:"8.5",isactive:true})
+{
+  acknowledged: true,
+  insertedId: ObjectId('685783b782b4d32475b3639b')
+}
+Reactdb
+
+
+//find
+db.Student.find()
+db.Student.findOne({Name:"charu"})
+{
+  _id: ObjectId('6857804c82b4d32475b36395'),
+  Name: 'charu',
+  Dept: 'IT',
+  DOB: '04-01-2006',
+  CGPA: '8.5',
+  isactive: true
+}
+db.Student.find({Dept:"IT"})
+
+
+//update
+db.Student.updateOne({Name:"charu"},{$set:{Name:"charuleela"}})
+db.Student.updateMany({Dept:"IT"},{$set:{Sem:{subCount:5,Credit:10}}})
+
+
+--db.Student.find({"Sem.Credit":10})
+--db.Student.updateOne({Name:"charu"},{$set:{age:19}})
+--db.Student.updateOne({Name:"dhivya"},{$set:{age:21}})
+
+//greater than 19 , less than 19
+--db.Student.find({age:{$gt:19}})
+--db.Student.find({age:{$lt:19}})
+
+//greater than or equal to 19 , less than or equal to 19
+--db.Student.find({age:{$lte:19}})
+--db.Student.find({age:{$gte:19}})
+
+//not equal to 19
+--db.Student.find({age:{$ne:19}})
+
+//AND operation
+--db.Student.find({Dept:"IT",age:15}) //not match eg
+--db.Student.find({Dept:"ECE",age:15})//peg
+
+//OR Operation
+--db.Student.find({$or:[{Dept:"CSE"},{age:15}]})
+//gives both values results..
+
+//sort
+--db.Student.find().sort({age:1})ascending
+--db.Student.find().sort({age:-1})descending
+
+//deletion
+export collection file to any directory 
+
+--db.Student.deleteOne({Name:"tinu"})
+--db.Student.deleteMany({Dept:"IT"}) 
+
+if want deleted collections 
+ ---click add data , import collection file 
+
+
+express
+--watch //live server

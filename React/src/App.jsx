@@ -1,4 +1,4 @@
-import React from 'react'
+import React,{useContext} from 'react'
 import { Routes, Route } from 'react-router-dom'
 import Child from './Component/Child.jsx'
 import Home from './Pages/Home.jsx'
@@ -11,6 +11,7 @@ import Navbar from './Component/Navbar.jsx'
 import State from './Hooks/State.jsx'
 import Hooks from './Pages/Hooks.jsx'
 import Effect from './Hooks/Effect.jsx'
+import Context from './Hooks/Context.jsx'
 
 const App = () => {
 
