@@ -3,7 +3,7 @@ const dotenv = require('dotenv');
 const cors = require('cors');
 
 const router = require('./routers/egRouters');      
-const todorouter = require('./routers/todoRouters');
+const todoRoute = require('./routers/todoRouters');
 const connectDB = require('./config/db');
 
 dotenv.config();
@@ -14,12 +14,13 @@ app.use(cors());
 app.use(express.json());
 
 // Connect to MongoDB
-connectDB();
+
 
 // API routes
 app.use(router);          
-app.use('/todo', todorouter);    
+app.use('/todo', todoRoute);    
 
+connectDB();
 // Start server
 const PORT = process.env.PORT;
 app.listen(PORT, () => {

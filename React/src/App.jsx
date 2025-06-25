@@ -17,8 +17,8 @@ import Context from './Hooks/Context.jsx'
 import Todo from './Pages/Todo.jsx'
 const App = () => {
 
-  var array = ['Oliver', 'Wade', 'Max', 'Hadrien', 'Stein'];
-  var login = { username: 'durgadevi', password: 'durga0906' }
+  var array = ['tinu', 'kivi', 'ruth', 'open', 'Set'];
+  var login = { username: 'charuleela', password: 'charu@123' }
   return (
     <div>
       {/* <Child name="Oliver" dept="FrontEnd Developer" contact="8807671271"/>
@@ -31,6 +31,7 @@ const App = () => {
       <Navbar />
       <Routes>
         <Route path='/home' element={<Home items={array} user={login} />} />
+         <Route path="/" element={<Home />} />
         <Route path='/about' element={<About items={array} user={login} />}/>
         <Route path='/counter' element={<Counter />}/>
         <Route path='/login' element={<Login />}/>
