@@ -1,4 +1,4 @@
-import React,{useContext} from 'react'
+import React from 'react'
 import { Routes, Route } from 'react-router-dom'
 import Child from './Component/Child.jsx'
 import Home from './Pages/Home.jsx'
@@ -11,15 +11,17 @@ import Navbar from './Component/Navbar.jsx'
 import State from './Hooks/State.jsx'
 import Hooks from './Pages/Hooks.jsx'
 import Effect from './Hooks/Effect.jsx'
+import Ref from './Hooks/Ref.jsx'
+import Reducer from './Hooks/Reducer.jsx'
 import Context from './Hooks/Context.jsx'
-
+import Todo from './Pages/Todo.jsx'
 const App = () => {
 
-  var array = ['tinu', 'ram', 'don', 'lily', 'ruby'];
-  var login = { username: 'charu', password: 'charu@123' }
+  var array = ['Oliver', 'Wade', 'Max', 'Hadrien', 'Stein'];
+  var login = { username: 'durgadevi', password: 'durga0906' }
   return (
     <div>
-      {/* <Child name="lily" dept="FrontEnd Developer" contact="8976459705"/>
+      {/* <Child name="Oliver" dept="FrontEnd Developer" contact="8807671271"/>
       <Home items={array} user={login}/>
       <About/>
       <Skills/>
@@ -28,8 +30,8 @@ const App = () => {
       <Counter/> */}
       <Navbar />
       <Routes>
-        <Route path='/home' element={<Home items={array} users={login} />} />
-        <Route path='/about' element={<About items={array} users={user}/>}/>
+        <Route path='/home' element={<Home items={array} user={login} />} />
+        <Route path='/about' element={<About items={array} user={login} />}/>
         <Route path='/counter' element={<Counter />}/>
         <Route path='/login' element={<Login />}/>
         <Route path='/skills' element={<Skills />}/>
@@ -38,6 +40,10 @@ const App = () => {
         <Route path='/hooks' element={<Hooks />}/>
         <Route path='/state' element={<State />}/>
         <Route path='/effect' element={<Effect />}/>
+        <Route path='/ref' element={<Ref />}/>
+        <Route path='/reducer' element={<Reducer />}/>
+        <Route path='/context' element={<Context />}/>
+        <Route path='/todo' element={<Todo />}/>
       </Routes>
 
     </div>

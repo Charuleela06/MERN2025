@@ -1,25 +1,13 @@
 import React from 'react'
-import { useState } from 'react';
-const State = () => {
-    const [count, setCount] = useState(0);
-    const increment = () => {
-        setCount(count + 1)
-    }
-    const decrement = () => {
-        setCount(count - 1)
-    }
-    const reset = () => {
-        setCount(0)
-    }
-    return (
-        <div style={{ width: "200px", padding: "20px", backgroundColor: "lightblue", display: "flex", flexDirection: "column", justifyContent: "center", border: "2px doubled black", margin: "10px" }}>
-            <h1 style={{ textAlign: "center" }}>{count}</h1>
-            <button style={{ margin: "10px", padding: "10px", border: "none", borderRadius: "10px", backgroundColor: "lightpink" }} onClick={increment}>Increment</button>
-            <button style={{ margin: "10px", padding: "10px", border: "none", borderRadius: "10px", backgroundColor: "lightpink" }} onClick={decrement}>Decrement</button>
-            <button style={{ margin: "10px", padding: "10px", border: "none", borderRadius: "10px", backgroundColor: "lightpink" }} onClick={reset}>Reset</button>
+import { Link } from 'react-router-dom'
 
-        </div>
-    )
+const Hooks = () => {
+  return (
+    <div style={{display:"flex", flexDirection:"column",justifyContent:"center",margin:"100px" ,alignItems:"center"}}>
+        <Link style={{textDecoration:"none", color:"white", fontSize:"22px" , fontWeight:"bold", margin:"15px" , width:"120px", padding:"10px",background:"linear-gradient(65deg,black,gray)",borderRadius:"10px",textAlign:"center"}} to="/state">UseState</Link>
+        <Link style={{textDecoration:"none", color:"white", fontSize:"22px" , fontWeight:"bold", margin:"15px",width:"120px", padding:"10px",background:"linear-gradient(65deg,black,gray)",borderRadius:"10px" ,textAlign:"center"}} to="/effect">UseEffect</Link>
+    </div>
+  )
 }
 
-export default State
+export default Hooks
